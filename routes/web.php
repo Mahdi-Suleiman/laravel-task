@@ -27,3 +27,17 @@ Route::get('/contact-us', function () {
 });
 
 Route::get('/arrayTask', [ArrayTaskController::class, 'index']);
+
+Route::any('/emptyRoute', function () {
+    return 'henlo wrold';
+});
+
+Route::match(['get', 'post'], '/emptyRoute', function () {
+    return 'henlo wrold';
+});
+
+route::redirect('redirect', 'emptyRoute');
+
+Route::get('/user/{id?}', function ($id = 1) {
+    return 'User ' . $id;
+})->where('id', '[0-9]+');
