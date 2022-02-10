@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ArrayTaskController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,3 +25,5 @@ Route::get('/about-us', function () {
 Route::get('/contact-us', function () {
     return view('contact-us');
 });
+
+Route::get('/arrayTask', [ArrayTaskController::class, 'index']);
