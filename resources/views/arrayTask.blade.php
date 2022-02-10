@@ -29,8 +29,8 @@
         <tbody>
             @foreach ($array3 as $product)
             <tr>
-                <!-- <td>{{--$key--}}</td>
-                <td>{{--$value--}}</td> -->
+                {{-- <td>{{$key}}</td>
+                <td>{{$value}}</td> --}}
                 <td>{{$product->name;}}</td>
                 <td>{{$product->description;}}</td>
             </tr>
